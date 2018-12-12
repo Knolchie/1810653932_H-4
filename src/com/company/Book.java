@@ -16,7 +16,9 @@ public class Book {
         this.isbn=isbn;
     }
 
-    public Book(){} //Default konstruktor sodass das Paperbook von Book erben kann
+    public Book(String isbn){
+        this.isbn= isbn;
+    } //Zweiter konstruktor um fuer paperbook isbn sofort bei null starten lassen
 
 
 

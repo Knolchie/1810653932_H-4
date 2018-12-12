@@ -7,9 +7,12 @@ public class Paperbook extends Book
   private   String series;
   private String month;
 
-  public Paperbook (int pages, Date released, String title, String isbn,String series,String month){
+  public Paperbook (String isbn){
+      super("");
+  }
 
-      super(pages, released, title, isbn);
+  public Paperbook (int pages, Date released, String title,String series,String month){
+      super(pages, released,title, "000000-000000-000000");
       this.series= series;
       this.month=month;
 
@@ -23,5 +26,13 @@ public class Paperbook extends Book
 
     public void setMonth(String month) {
         this.month = month;
+    }
+
+    public String getSeries() {
+        return series;
+    }
+
+    public void setSeries(String series) {
+        this.series = series;
     }
 }
